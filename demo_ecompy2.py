@@ -60,7 +60,7 @@ elif status == "Datasets":
 
 
     @st.cache
-    events = load_data("DST/events.csv", 100)
+    events = pd.read_csv("DST/events.csv")
     st.subheader("Events")
     st.write(events)
 
