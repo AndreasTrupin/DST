@@ -60,12 +60,7 @@ elif status == "Datasets":
 
 
     @st.cache
-    def load_data(file_name, nrows):
-        data = pd.read_csv(file_name)
-        return data.head(nrows)
-
-
-    events = load_data("events.csv", 100)
+    events = load_data("DST/events.csv", 100)
     st.subheader("Events")
     st.write(events)
 
@@ -128,7 +123,6 @@ elif status == "Preprocessing":
 
 # .................................. Start of Dataviz section ............................
 elif status == "Data visualisation":
-    import plotly.graph_objects as go
     st.title("Data visualisation : ")
     st.subheader("1. Répartition des événements : ")
     st.markdown("> **Total d'événements : 2 756 100**")
