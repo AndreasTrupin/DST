@@ -58,8 +58,7 @@ elif status == "Datasets":
     st.markdown(
         "Pour chaque action faite sur le site, une ligne est ajoutée à la base de données  ‘events’, avec la date de l’événement et les informations de cette action. ")
 
-    from pathlib import Path
-    events = load_data("/app/DST/events.csv.csv", 100)
+    events = pd.read_csv("/app/DST/events.csv.csv")
 
     st.subheader("Events")
     st.write(events)
