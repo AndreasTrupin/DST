@@ -59,9 +59,7 @@ elif status == "Datasets":
         "Pour chaque action faite sur le site, une ligne est ajoutée à la base de données  ‘events’, avec la date de l’événement et les informations de cette action. ")
 
     from pathlib import Path
-
-    events = Path(__file__).parents[1] / 'DST/events.csv'
-    
+    events = load_data("/app/DST/events.csv.csv", 100)
 
     st.subheader("Events")
     st.write(events)
